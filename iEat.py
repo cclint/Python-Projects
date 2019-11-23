@@ -38,12 +38,11 @@ def genreChooser(food_library: dict) -> str:  # randomly choose a genre
     return genre
 
 
-def genreToRestaurantMap(
+def genreToRestaurantMatch(
     genre: str
 ) -> list:  # matches the randomly chosen genre to it's value
-    for restaurant_type, restaurant in food_library.items():
-        if restaurant_type == genre:
-            return restaurant
+    restaurant = food_library.get(genre)
+    return restaurant
 
 
 def restaurantChooser(
@@ -61,7 +60,7 @@ def output(choice: str) -> str:
 def run():
     library_greeting = libraryModifier(greeting())
     genre_chooser = genreChooser(library_greeting)
-    genre_to_restaurant = genreToRestaurantMap(genre_chooser)
+    genre_to_restaurant = genreToRestaurantMatch(genre_chooser)
     restaurant_chooser = restaurantChooser(genre_to_restaurant)
     final_dialog = output(restaurant_chooser)
     return final_dialog
