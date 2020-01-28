@@ -15,7 +15,7 @@ def greeting():
     )
     return convo
 
-
+# Poop
 def libraryModifier(convo: str) -> dict:
     if convo == "ALL" or convo == "all" or convo == "All":
         return food_library
