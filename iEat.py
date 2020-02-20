@@ -45,7 +45,6 @@ def genreToRestaurantMatch(
     restaurant = food_library.get(genre)
     return restaurant
 
-
 def restaurantChooser(
     restaurant: list
 ) -> str:  # randomly choses an element in the restaurant list
