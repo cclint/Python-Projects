@@ -8,7 +8,7 @@ food_library = {
     "Fast Food": ["Burger King", "Arbys", "Chick-Fil-A"],
 }
 
-
+#poop 
 def greeting():
     convo = input(
         "Hi! Welcome to iEat! Rate your budget from $ - $$$. $ = cheap, $$ = moderate, $$$ = high price. If don't care about the expense, say ALL:\n"
@@ -48,7 +48,7 @@ def genreToRestaurantMatch(
 
 def restaurantChooser(
     restaurant: list
-) -> str:  # randomly choses an element in the restaurant list
+) -> str:  # randomly chooses an element in the restaurant list
     choice = random.choice(restaurant)
     return choice
 
